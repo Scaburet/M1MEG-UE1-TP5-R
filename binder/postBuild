@@ -6,6 +6,7 @@ jupyter labextension install \
 # Install R package
 # if not available as conda package
 R -e "install.packages('diagram', repos='http://cran.rstudio.com/')"
+R -e "install.packages('locfit', repos='http://cran.rstudio.com/')"
 
 # Va falloir trouver un moyen de désactiver le threading
 # R -e "install.packages('preprocessCore', --configure-args='--disable-threading')"
@@ -24,10 +25,10 @@ R -e "BiocManager::install()"
 R -e "BiocManager::install('Biostrings')"
 
 # Ajout des packages R nécessaires depuis Bioconductor
-R -e "BiocManager::install('Biobase')"
+
 R -e "BiocManager::install('limma')"
-R -e "BiocManager::install('affy')"
-R -e "BiocManager::install('affyPLM')"
-R -e "BiocManager::install('simpleaffy')"
-R -e "BiocManager::install('genefilter')"
-R -e "BiocManager::install('mouse4302cdf')"
+R -e "BiocManager::install('DESeq')"
+
+# R -e "BiocManager::install('Biobase')"
+# R -e "BiocManager::install('genefilter')"
+
